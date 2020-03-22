@@ -52,11 +52,7 @@
     // Array.prototype.findIndex()
     // Find the comment with this ID
     // delete the comment with the ID of 823423
-    let whichIndex = comments.findIndex( comment => {
-      if(comment.id === 823423){
-        return true;
-      }
-    });
+    let whichIndex = comments.findIndex( comment => (comment.id === 823423));
     console.log(whichIndex);
 
 
