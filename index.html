@@ -18,10 +18,10 @@
 
     const comments = [
       { text: 'Love this!', id: 523423 },
-      { text: 'Super good', id: 823423 },
       { text: 'You are the best', id: 2039842 },
       { text: 'Ramen is my fav food ever', id: 123523 },
-      { text: 'Nice Nice Nice!', id: 542328 }
+      { text: 'Nice Nice Nice!', id: 542328 },
+      { text: 'Super good', id: 823423 }
     ];
 
     // Some and Every Checks
@@ -35,7 +35,7 @@
       let age = new Date().getFullYear() - person.year;
 
       if(age > 18){
-        console.log(age)
+        // console.log(age)
         return true;
       }
     });
@@ -47,11 +47,18 @@
     // find the comment with the ID of 823423
     let finder = comments.find(comment => (comment.id === 823423))
 
-    console.log(finder)
+    // console.log(finder)
 
     // Array.prototype.findIndex()
     // Find the comment with this ID
     // delete the comment with the ID of 823423
+    let whichIndex = comments.findIndex( comment => {
+      if(comment.id === 823423){
+        return true;
+      }
+    });
+    console.log(whichIndex);
+
 
   </script>
 </body>
